@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide & Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="topbar">
+  <div class="brand">
+    <h1>Leonida Legend</h1>
+    <p class="tagline">The GTA VI trophy guide &amp; tracker — all 55 PlayStation 5 trophies, offline.</p>
+  </div>
+  <div class="scoreboard">
+    <div id="bigcount">0<span class="of"> / 55</span></div>
+    <div id="progresslabel">0% to the platinum</div>
+    <div class="bar"><div id="barfill"></div></div>
+    <div id="gradecounts" class="gradecounts"></div>
+  </div>
+</header>
+
+<section id="controls" aria-label="Tracker controls">
+  <input id="search" type="search" placeholder="Search trophies, missions, places…" autocomplete="off">
+  <div id="gradechips" class="chips" role="group" aria-label="Filter by grade">
+    <button type="button" data-grade="all" class="chip active">All grades</button>
+    <button type="button" data-grade="platinum" class="chip">Platinum</button>
+    <button type="button" data-grade="gold" class="chip">Gold</button>
+    <button type="button" data-grade="silver" class="chip">Silver</button>
+    <button type="button" data-grade="bronze" class="chip">Bronze</button>
+  </div>
+  <label>Kind
+    <select id="kindfilter">
+      <option value="all">All kinds</option>
+      <option value="story">Story</option>
+      <option value="completion">Completion</option>
+      <option value="quests">Questlines</option>
+      <option value="activities">Activities</option>
+      <option value="collectibles">Collectibles</option>
+      <option value="partner">Partner</option>
+      <option value="combat">Combat &amp; robbery</option>
+      <option value="money">Money</option>
+      <option value="misc">Miscellaneous</option>
+    </select>
+  </label>
+  <label>Status
+    <select id="statusfilter">
+      <option value="all">Confirmed + unconfirmed</option>
+      <option value="confirmed">Confirmed only</option>
+      <option value="unconfirmed">Unconfirmed only</option>
+    </select>
+  </label>
+  <label class="toggle"><input id="missableonly" type="checkbox"> Missable only</label>
+  <label class="toggle"><input id="spoilers" type="checkbox"> Hide story spoilers</label>
+  <label class="toggle"><input id="hideearned" type="checkbox"> Hide earned</label>
+  <button id="exportbtn" type="button">Export progress</button>
+  <label class="importbtn">Import progress <input id="importfile" type="file" accept="application/json"></label>
+</section>
+
+<p id="missablebanner">⚠ One missable step in the whole game: the Chapter 1 meditation at Jason's house for <strong>Positive Mental Attitude</strong>. Do it after Down to Earth, before Chapter 1 ends. Everything else can be finished in free-roam after the story.</p>
+
+<main id="layout">
+  <section id="listpane">
+    <h2 id="listheading">Trophy checklist</h2>
+    <p id="showing"></p>
+    <div id="trophylist"></div>
+  </section>
+  <aside id="guidepane">
+    <div id="guideempty">
+      <h2>Guide</h2>
+      <p>Pick any trophy in the checklist to read its guide here — what to do, where, and when it can be missed. Every guide names its sources.</p>
+      <h3>Roadmap to the platinum</h3>
+      <ol id="roadmap"></ol>
+      <h3>Sources</h3>
+      <ul id="sourcenames"></ul>
+    </div>
+    <article id="guidecard" hidden>
+      <p id="guidemeta"></p>
+      <h2 id="guidename"></h2>
+      <p id="guidedesc"></p>
+      <p id="guideflags"></p>
+      <h3>How to earn it</h3>
+      <p id="guidetext"></p>
+      <label class="toggle big"><input id="guidecheck" type="checkbox"> I have earned this trophy</label>
+      <p><button id="guideclose" type="button">Back to roadmap</button></p>
+    </article>
+  </aside>
+</main>
+
+<footer id="pagefoot">
+  <p>Leonida Legend — an offline fan-made tracker. Trophy names, descriptions and grades © Sony Interactive Entertainment / Rockstar Games, shown as PlayStation publishes them. Guides are original text written for this entry and cite their sources in each trophy's panel. Works with the network off; progress never leaves your browser.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
